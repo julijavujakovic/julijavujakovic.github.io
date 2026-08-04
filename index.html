@@ -390,6 +390,19 @@ footer {
   .section { padding: 3.5rem 1.4rem; }
   #blob { display: none; }
 }
+.floating-icons { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.fi {
+  position: absolute;
+  font-size: 1.6rem;
+  color: rgba(109,58,60,0.18);
+  animation: floatIcon 6s ease-in-out infinite;
+  user-select: none;
+}
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(4deg); }
+  66% { transform: translateY(6px) rotate(-3deg); }
+}
 </style>
 </head>
 <body>
@@ -423,6 +436,13 @@ footer {
 <a class="btn-filled" href="cv.pdf" target="_blank">View My CV</a>
 <a class="btn-ghost" href="#experience">See My Work</a>
 </div>
+</div>
+<div class="floating-icons">
+  <span class="fi" style="top:12%;right:8%;animation-delay:0s;">⟨/⟩</span>
+  <span class="fi" style="top:28%;right:18%;animation-delay:0.8s;">◈</span>
+  <span class="fi" style="top:18%;right:32%;animation-delay:1.4s;">⊞</span>
+  <span class="fi" style="top:42%;right:6%;animation-delay:0.4s;">⬡</span>
+  <span class="fi" style="top:55%;right:24%;animation-delay:1.8s;">◎</span>
 </div>
 <div class="scroll-cue">
 <svg fill="none" height="16" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M12 5v14M5 12l7 7 7-7"></path></svg>
