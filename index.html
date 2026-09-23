@@ -403,6 +403,13 @@ footer {
   33% { transform: translateY(-12px) rotate(4deg); }
   66% { transform: translateY(6px) rotate(-3deg); }
 }
+@keyframes catWalk {
+  0%   { left: -40px; transform: scaleX(1); }
+  49%  { left: calc(100% + 10px); transform: scaleX(1); }
+  50%  { left: calc(100% + 10px); transform: scaleX(-1); }
+  99%  { left: -40px; transform: scaleX(-1); }
+  100% { left: -40px; transform: scaleX(1); }
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -693,8 +700,9 @@ On the side I'm building GutSync, an AI-powered gut health app, and actively res
 <span class="fact-emoji">🎙️</span>
 <span class="fact-body">Right now I'm tearing through thriller novels faster than I can buy them. I also bake — sourdough, gut-friendly desserts, anything that requires patience and a good process. Turns out data and baking have more in common than people think.</span>
 </div>
-<div class="fact-card">
-<span class="fact-emoji">🐱</span>
+<div class="fact-card" id="cat-card" style="position:relative; overflow:hidden;">
+<div id="walking-cat" style="position:absolute; top:6px; left:-40px; font-size:1.2rem; animation: catWalk 6s linear infinite;">🐱</div>
+<span class="fact-emoji" style="margin-top:1.2rem; display:block;">🐱</span>
 <span class="fact-body">Cat mom. He is unimpressed by the dashboards but very supportive of the work from home schedule.</span>
 </div>
 </div>
