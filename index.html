@@ -409,11 +409,18 @@ footer {
   animation: catWalkAcross 7s linear infinite;
 }
 @keyframes catWalkAcross {
-  0%   { left: -60px; transform: scaleX(1); }
-  48%  { left: calc(100% + 20px); transform: scaleX(1); }
-  50%  { left: calc(100% + 20px); transform: scaleX(-1); }
-  98%  { left: -60px; transform: scaleX(-1); }
-  100% { left: -60px; transform: scaleX(1); }
+  0%   { left: -60px; transform: scaleX(-1); }
+  48%  { left: calc(100% + 20px); transform: scaleX(-1); }
+  50%  { left: calc(100% + 20px); transform: scaleX(1); }
+  98%  { left: -60px; transform: scaleX(1); }
+  100% { left: -60px; transform: scaleX(-1); }
+}
+@keyframes catWalkReverse {
+  0%   { left: calc(100% + 20px); transform: scaleX(1); }
+  48%  { left: -60px; transform: scaleX(1); }
+  50%  { left: -60px; transform: scaleX(-1); }
+  98%  { left: calc(100% + 20px); transform: scaleX(-1); }
+  100% { left: calc(100% + 20px); transform: scaleX(1); }
 }
 .css-cat { position: relative; width: 48px; height: 32px; }
 .cat-body {
@@ -777,6 +784,23 @@ On the side I'm building GutSync, an AI-powered gut health app, and actively res
   </div>
   <span class="fact-emoji">🐱</span>
   <span class="fact-body">Cat mom. He is unimpressed by the dashboards but very supportive of the work from home schedule.</span>
+  <div class="walking-cat-container" style="top: auto; bottom: 6px; animation: catWalkReverse 7s linear infinite;">
+    <div class="css-cat">
+      <div class="cat-body"></div>
+      <div class="cat-head">
+        <div class="cat-ear cat-ear-left"></div>
+        <div class="cat-ear cat-ear-right"></div>
+        <div class="cat-eye cat-eye-left"></div>
+        <div class="cat-eye cat-eye-right"></div>
+        <div class="cat-nose"></div>
+      </div>
+      <div class="cat-tail"></div>
+      <div class="cat-leg cat-leg-fl"></div>
+      <div class="cat-leg cat-leg-fr"></div>
+      <div class="cat-leg cat-leg-bl"></div>
+      <div class="cat-leg cat-leg-br"></div>
+    </div>
+  </div>
 </div>
 </div>
 </div>
